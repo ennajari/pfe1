@@ -15,11 +15,11 @@
       <ul id="ALS">
         <button class="favorite styled" id="A"
         type="button">
-<a href="http://127.0.0.1:8000/">Accueil</a>
+<a href="{{ route('acceil') }}">Accueil</a>
         </button>
         <button class="favorite styled" id="I"
         type="button">
-<a href="{{route('registre')}}"> Inscriptoin</a>
+<a href="{{route('register')}}"> Inscriptoin</a>
         </button>
         <button class="favorite styled" id="C"
         type="button">
@@ -29,10 +29,10 @@
     </nav>
     <p>Bienvenue sur notre application web de gestion des emplois du temps d'une faculte. <br>
          application permet aux etudiants et aux enseignants de consulter les emplois du temps de chaque classe. <br>
-        La gestion de l’emploi est un sous-ensemble important de la gestion des ressources <br> 
-        humaines de l’entreprise. Sur les plans individuel et collectif, à l’occasion notamment <br> 
-         de reconversions professionnelles induites par des mutations dans l’organisation  <br> 
-          ou les technologies. Son objet est donc de <br> 
+        La gestion de l’emploi est un sous-ensemble important de la gestion des ressources <br>
+        humaines de l’entreprise. Sur les plans individuel et collectif, à l’occasion notamment <br>
+         de reconversions professionnelles induites par des mutations dans l’organisation  <br>
+          ou les technologies. Son objet est donc de <br>
           rapprocher au mieux les besoins et les ressources en professionnelles
     </p>
     <h2>Informations sur l'application</h2>

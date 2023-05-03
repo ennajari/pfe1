@@ -340,7 +340,7 @@ h4{
   margin-right: 0%
 }
   </style>
-  <div class="nav-container"><a href="http://127.0.0.1:8000/" class="nav-tab">Accueil</a><a class="nav-tab" href="http://127.0.0.1:8000/register">Inscription</a><a class="nav-tab" href="http://127.0.0.1:8000/login">Connexion</a><span class="nav-tab-slider"></span></div>
+  <div class="nav-container"><a href="{{ route("acceil") }}" class="nav-tab">Accueil</a><a class="nav-tab" href="http://127.0.0.1:8000/register">Inscription</a><a class="nav-tab" href="http://127.0.0.1:8000/login">Connexion</a><span class="nav-tab-slider"></span></div>
 <sectio class="nav">
   <h1 style style="margin-top: 0%;">Gestoin Des emplois Du Temps</h1>
 <pre> Bienvenue sur notre application web de gestion des emplois du temps d'une faculte.

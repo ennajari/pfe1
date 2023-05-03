@@ -17,4 +17,8 @@ class Professeur extends Model
     {
         return $this->hasMany('App\Models\Desponibilite');
     }
+
+    public function user(){
+        return $this->belongsTo(User::class, 'prof_id');
+    }
 }

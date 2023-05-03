@@ -47,17 +47,18 @@
 			<tr>
 				<td>8:00-10:00</td>
 				<td>PHP
-               <hr>
-               <sub>R.Dakir</sub>
-               <hr>
-               Amphi B
-         </td>
+                   <hr>
+                   <sub>R.Dakir</sub>
+                   <hr>
+                   Amphi B
+                </td>
 				<td></td>
 				<td></td>
 				<td> TD(PHP)<hr>
-               <sub>R.Dakir</sub>
-               <hr>
-               Amphi B</td></td>
+                   <sub>R.Dakir</sub>
+                   <hr>
+                   Amphi B
+                </td>
 				<td></td>
 				<td></td>
 			</tr>
@@ -65,24 +66,30 @@
 				<td>10:00-12:00</td>
 				<td></td>
 				<td></td>
-				<td>TD(Ihm)<hr>
-               <sub>M.bennadey</sub>
-               <hr>
-               Amphi B</td>
+				<td>
+                    TD(Ihm)<hr>
+                    <sub>M.bennadey</sub>
+                    <hr>
+                    Amphi B
+                </td>
 				<td></td>
 				<td></td>
-				<td> génie logiciel<hr>
-               <sub>A.Bouain</sub>
-               <hr>
-               Amphi C</td></td>
+				<td>
+                    génie logiciel<hr>
+                   <sub>A.Bouain</sub>
+                   <hr>
+                   Amphi C
+                </td>
 			</tr>
 			<tr>
 				<td>14:00-16:00</td>
 				<td></td>
-				<td> Td(génie logiciel)<hr>
-               <sub>A.Bouain</sub>
-               <hr>
-               Amphi B</td></td>
+				<td>
+                    Td(génie logiciel)<hr>
+                   <sub>A.Bouain</sub>
+                   <hr>
+                   Amphi B
+                </td>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -90,10 +97,11 @@
 			</tr>
 			<tr>
 				<td>16:00-18:00</td>
-				<td>Modélisation<hr>
-               <sub>A.El-moutassem</sub>
-               <hr>
-               Amphi B</td></td>
+				<td>
+                    Modélisation<hr>
+                   <sub>A.El-moutassem</sub>
+                   <hr>
+                   Amphi B</td></td>
 				<td></td>
 				<td></td>
 				<td></td>

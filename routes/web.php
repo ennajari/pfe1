@@ -33,6 +33,12 @@ Auth::routes();
 Route::get('/admin', [App\Http\Controllers\HomeController::class, 'admin'])->name('admin');
 Route::get('/emploi', [App\Http\Controllers\HomeController::class, 'emploi'])->name('emploi');
 
+
+Route::get('/assign-emploi', [App\Http\Controllers\EmploiController::class, 'assignEmploi'])->name('emploi.assign');
+Route::post('/assign-emploi', [App\Http\Controllers\EmploiController::class, 'updateClasse'])->name('update.classe');
+
+Route::get('/emploi-generate', [App\Http\Controllers\EmploiController::class, 'emploiGenerate'])->name('emploi.generate');
+
 // le route acceil
 Route::get('/acceil', [App\Http\Controllers\HomeController::class, 'acceil'])->name('acceil');
 

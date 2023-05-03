@@ -18,6 +18,7 @@ class Desponibilite extends Model
         't10_12',
         't14_16',
         't16_18',
+        '$classeId',
     ];
     protected $fillable1 = ['heure_debut', 'heure_fin', 'jour', 'type_cours', 'salle_id', 'professeur_id'];
     // Définir la relation entre les disponibilités et les professeurs
@@ -26,7 +27,7 @@ class Desponibilite extends Model
 
     public function professeur()
     {
-        return $this->belongsTo('App\Models\Professeur');
+        return $this->belongsTo(Professeur::class, 'prof_id');
     }
 
     public function salle()

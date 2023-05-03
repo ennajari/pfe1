@@ -77,10 +77,13 @@ th {
 
     <form action="traitement.php" method="post">
         <h1>page d'admin :</h1>
-        <button class="favorite styled"
-        type="button">
-     <a href="/emploi">afficher les emplois</a>
-</button>
+        <button class="favorite styled" type="button">
+             <a href="/emploi">afficher les emplois</a>
+        </button>
+
+        <a href="{{ route('emploi.assign') }}">
+            <button type="button" class="favorite styled">Generate emploi</button>
+        </a>
 <br>
 <br>
 <body>

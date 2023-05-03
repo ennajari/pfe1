@@ -94,8 +94,14 @@
 
     </style>
 <body style="background:linear-gradient(to bottom, #87CEFA, #1E90FF); ">
+
   <h1>Tableau de dedisponibilité:</h1>
 
+  @if(session('success'))
+      <div class="text-success p-3 text-center w-100">
+          {{ session('success') }}
+      </div>
+  @endif
   <form method="POST" action="{{ route('desponibilites.store') }}">
     @csrf
     <table>
