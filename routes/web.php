@@ -34,10 +34,10 @@ Route::get('/admin', [App\Http\Controllers\HomeController::class, 'admin'])->nam
 Route::get('/emploi', [App\Http\Controllers\HomeController::class, 'emploi'])->name('emploi');
 
 
-Route::get('/assign-emploi', [App\Http\Controllers\EmploiController::class, 'assignEmploi'])->name('emploi.assign');
+Route::get('/assign-emploi/{id}', [App\Http\Controllers\EmploiController::class, 'assignEmploi'])->name('emploi.assign');
 Route::post('/assign-emploi', [App\Http\Controllers\EmploiController::class, 'updateClasse'])->name('update.classe');
 
-Route::get('/emploi-generate', [App\Http\Controllers\EmploiController::class, 'emploiGenerate'])->name('emploi.generate');
+Route::get('/emploi-generate/{id}', [App\Http\Controllers\EmploiController::class, 'emploiGenerate'])->name('emploi.generate');
 
 // le route acceil
 Route::get('/acceil', [App\Http\Controllers\HomeController::class, 'acceil'])->name('acceil');
@@ -50,6 +50,8 @@ Route::delete('delete-row/{id}', [App\Http\Controllers\ProfesseurController::cla
 // les route de desponibilite
 
 Route::get('/despo', [App\Http\Controllers\HomeController::class, 'despo'])->name('despo');
+Route::get('/despo/edit/{prof}', [App\Http\Controllers\DesponibiliteController::class, 'edit'])->name('despo.edit');
+Route::post('/despo/edit', [App\Http\Controllers\DesponibiliteController::class, 'update'])->name('dispo.update');
 Route::post('/disponibilites', [App\Http\Controllers\DesponibiliteController::class, 'store'])->name('desponibilites.store');
 
 // les route de emplois

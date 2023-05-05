@@ -3,15 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Models\Desponibilite;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class EmploiController extends Controller
 {
-    public function assignEmploi(){
+    public function assignEmploi(int $profId){
 
-        $user = Auth::user();
+        $user = User::find($profId);
+
         $desponibilities = DB::table('desponibilites')->where('prof_id', $user->id)->get();
         $professeur = DB::table('professeurs')->where('prof_id', $user->id)->get();
 
@@ -34,9 +36,9 @@ class EmploiController extends Controller
 
     }
 
-    public function emploiGenerate()
+    public function emploiGenerate(int $profId)
     {
-        $user = Auth::user();
+        $user = User::find($profId);
 
         $desponibilites = DB::select('SELECT d.*, p.*
                         FROM desponibilites d JOIN professeurs p

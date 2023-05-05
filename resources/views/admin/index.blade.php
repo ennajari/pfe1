@@ -25,7 +25,7 @@ body {
             text-align: center;
             font-size: 36px;
         }
-        form {
+        .form {
             margin-right: 3%;
           margin-left: 3%;
             background-color: #cac4c4;
@@ -75,15 +75,12 @@ th {
 </head>
 <body>
 
-    <form action="traitement.php" method="post">
+    <form action="#" method="post" class="form">
         <h1>page d'admin :</h1>
         <button class="favorite styled" type="button">
              <a href="/emploi">afficher les emplois</a>
         </button>
 
-        <a href="{{ route('emploi.assign') }}">
-            <button type="button" class="favorite styled">Generate emploi</button>
-        </a>
 <br>
 <br>
 <body>
@@ -93,31 +90,41 @@ th {
         <tr>
             <th>nom de professeur</th>
             <th>email</th>
+            <th>module</th>
             <th>spécialité</th>
+            <th>Generate Emploi</th>
             <th>action</th>
         </tr>
     </thead>
     <tbody>
+    @foreach($profs as $prof)
         <tr>
-            <td>{{ Auth::user()->name }}</td> <!-- remplacer "prof1" par le nom d'utilisateur de la session -->
-            <td>{{ Auth::user()->email }}</td>
-            <td>{{ Auth::user()->speciality }}</td>
+            <td>{{ $prof->name }}</td>
+            <td>{{ $prof->email }}</td>
+            <td>{{ $prof->module }}</td>
+            <td>{{ $prof->specialite }}</td>
             <td>
-                <button type="button" onclick="window.history.back();" class="btn btn-secondary">Modifier
-                <a href="/despo"></a></button>
-                <button type="button" onclick="supprimerLigne(this)" class="btn btn-secondary">Supprimer</button>
+                <a href="{{ route('emploi.assign', $prof->prof_id) }}">
+                    <button type="button" class="favorite styled">Generate emploi</button>
+                </a>
+            </td>
+            <td>
+                <a href="{{ route('despo.edit', $prof->id) }}">
+                    <button type="button" class="btn btn-secondary">
+                        Modifier
+                    </button>
+                </a>
+                <form action="{{ route('delete.row', $prof->id) }}" method="POST">
+                    @csrf
+                    @method('DELETE')
+
+                    <button type="submit" class="btn btn-danger">Supprimer</button>
+                </form>
             </td>
         </tr>
+    @endforeach
     </tbody>
 </table>
-<script>
-    function supprimerLigne(btn) {
-        // Obtenez la ligne parente (tr) du bouton cliqué
-        var row = btn.parentNode.parentNode;
-        // Supprimez la ligne de la table
-        row.remove();
-    }
-</script>
 </form>
 </body>
 

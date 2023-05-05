@@ -67,7 +67,7 @@
         </table>
 
         @if($allHasProfId)
-            <a href="{{ route('emploi.generate') }}">
+            <a href="{{ route('emploi.generate', $user->id ) }}">
                 <button>Generate Emploi</button>
             </a>
         @endif

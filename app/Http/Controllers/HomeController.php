@@ -6,6 +6,7 @@ use App\Models\Desponibilite;
 use App\Models\Professeur;
 use App\Models\Module;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -53,7 +54,14 @@ class HomeController extends Controller
 
     public function admin()
     {
-        return view('admin.index');
+        $profs = DB::table('professeurs')
+            ->join('users', 'professeurs.prof_id', '=', 'users.id')
+            ->select('professeurs.id', 'professeurs.prof_id','users.name', 'users.email', 'professeurs.specialite', 'professeurs.module')
+            ->distinct('professeurs.prof_id')
+            ->get();
+
+
+        return view('admin.index', compact('profs'));
     }
 
 
