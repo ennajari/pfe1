@@ -132,7 +132,7 @@
           </td>
         </tr>
         <tr>
-          <td>mercredi</td>
+          <td>Mercredi</td>
           <td>
             <input type="checkbox" name="Mercredi[]" value="8-10" id="t">08:00-10:00
             <input type="checkbox" name="Mercredi[]" value="10-12" id="l">10:00-12:00
@@ -141,7 +141,7 @@
           </td>
         </tr>
         <tr>
-          <td>jeudi</td>
+          <td>Jeudi</td>
           <td>
             <input type="checkbox" name="Jeudi[]" value="8-10" id="t">08:00-10:00
             <input type="checkbox" name="Jeudi[]" value="10-12" id="l">10:00-12:00
@@ -172,8 +172,6 @@
     <button type="submit" class="btn btn-primary">Sauvegarder</button>
 
   </form>
-
-  </table>
 
 </body>
 </html>
